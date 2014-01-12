@@ -1,0 +1,91 @@
+$font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$default-font-weight: 300;
+$default-font-size: 20px;
+
+$heavy-font-weight: 500;
+$heavy-font-size: 36px;
+
+$text-color: #404040;
+$background-color: #F0F0F0;
+$link-color: #7F7F7F;
+
+$triangle-width: 21.65px;
+
+@mixin border-widths-for-triangle-with-base-width-and-color($base-width, $color) {
+	border-left: (($base-width) / (2 * 0.866)) solid transparent;
+	border-right: (($base-width) / (2 * 0.866)) solid transparent;
+	border-bottom: $base-width solid $color;
+}
+
+body {
+	font-family: $font-family; 
+	font-weight: $default-font-weight;
+	font-size: $default-font-size;
+	color: $text-color;
+	background-color: $background-color;
+}
+
+h3 {
+	font-weight: $heavy-font-weight;
+	font-size: $heavy-font-size;
+	color: $text-color;
+	margin: 0px;
+}
+
+a {
+	color: $link-color;
+	text-decoration: none;
+	-webkit-transition: color 0.75s;
+}
+
+a:hover {
+	color: $text-color;
+	text-decoration: underline;
+}
+
+div.icon_cluster {
+	width: 75px;
+	float: left;
+}
+
+div.arrow-up {
+	width: 0; 
+	height: 0; 
+	float: left;
+	opacity: 1;
+	-webkit-transition: opacity 0.75s;
+}
+
+div#picture {
+	background-image:url('../img/paul_face.jpg');
+	float: left;
+	background-size:cover;
+	border-radius: 50%;
+	border-color: $background-color;
+}
+
+.spacer {
+	width: 100%;
+	float: left;
+}
+
+.white {
+	border-bottom-color:$background-color !important;
+}
+
+.gray {
+	border-bottom-color:$link-color !important;
+}
+
+.arrow-up:hover {
+	opacity: 0;
+}
+
+div#picture > * {
+	opacity: 1;
+	-webkit-transition: opacity 0.75s;
+}
+
+div#picture:hover > * {
+	opacity: 0;
+}

@@ -1,0 +1,41 @@
+@import 'base_style';
+
+$screen-size-adjusted-triangle-width: $triangle-width;
+
+div.icon_cluster
+{
+	width: 75px;
+}
+
+div#content
+{
+	margin-left: 20px;
+	float: left;
+	width: 90%;
+	margin-right: 20px;
+}
+
+div#icons
+{
+	margin-left: 20px;
+	float: left;
+	width: 90%;
+	margin-bottom: 20px;
+	margin-right: 20px;
+}
+
+div.arrow-up
+{
+	@include border-widths-for-triangle-with-base-width-and-color($screen-size-adjusted-triangle-width, $text-color);
+}
+
+div#picture
+{
+	width: 75px;
+	height: 75px;
+}
+
+.spacer
+{
+	height: 4px;
+}

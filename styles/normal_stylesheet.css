@@ -1,113 +1,91 @@
-body
-{
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-	font-weight: 300;
-	font-size: 20px;
-	color: #404040;
-	background-color: #F0F0F0;
-	margin-top: 75px;
-}
+body {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  color: #404040;
+  background-color: #f0f0f0; }
 
-h3
-{
-	font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-	font-weight:500;
-	font-size:36px;
-	color: #404040;
-	margin: 0px;
-}
+h3 {
+  font-weight: 500;
+  font-size: 36px;
+  color: #404040;
+  margin: 0px; }
 
-a
-{
-	color: #7F7F7F;
-	text-decoration: none;
-	-webkit-transition: color 0.75s;
-}
+a {
+  color: #7f7f7f;
+  text-decoration: none;
+  -webkit-transition: color 0.75s; }
 
-a:hover
-{
-	color: #404040;
-	text-decoration: underline;
-}
+a:hover {
+  color: #404040;
+  text-decoration: underline; }
 
-div.icon_cluster
-{
-	width:150px;
-	float: left;
-}
+div.icon_cluster {
+  width: 75px;
+  float: left; }
 
-div#content
-{
-	margin-left: 200px;
-	margin-right: 20px;
-	position: absolute;
-	width: 620px;
-	left: 15%;
-}
+div.arrow-up {
+  width: 0;
+  height: 0;
+  float: left;
+  opacity: 1;
+  -webkit-transition: opacity 0.75s; }
 
-div#icons
-{
-	margin-left: 20px;
-	margin-right: 20px;
-	position: absolute;
-	width: 150px;
-	left: 15%;
-	margin-bottom: 0px;
-}
+div#picture {
+  background-image: url("../img/paul_face.jpg");
+  float: left;
+  background-size: cover;
+  border-radius: 50%;
+  border-color: #f0f0f0; }
 
-div.arrow-up
-{
-	width: 0; 
-	height: 0; 
-	float:left;
-	border-left: 25px solid transparent;
-	border-right: 25px solid transparent;
+.spacer {
+  width: 100%;
+  float: left; }
 
-	border-bottom: 43.3px solid #404040;
-	opacity: 1;
-	-webkit-transition: opacity 0.75s; /* Safari */
-}
+.white {
+  border-bottom-color: #f0f0f0 !important; }
 
-div#picture
-{
-	background-image:url('/img/paul_face.jpg');
-	float:left;
-	width: 150px;
-	height: 150px;
-	background-size:cover;
-	border-radius: 50%;
-	border-color: white;
-}
+.gray {
+  border-bottom-color: #7f7f7f !important; }
 
-.spacer
-{
-	width: 100%;
-	float: left;
-	height: 8px;
-}
+.arrow-up:hover {
+  opacity: 0; }
 
-.white
-{
-	border-bottom-color:#F0F0F0 !important;
-}
+div#picture > * {
+  opacity: 1;
+  -webkit-transition: opacity 0.75s; }
 
-.gray
-{
-	border-bottom-color:#7F7F7F !important;
-}
+div#picture:hover > * {
+  opacity: 0; }
 
-.arrow-up:hover
-{
-	opacity: 0;
-}
+body {
+  margin-top: 75px; }
 
-div#picture > *
-{
-	opacity: 1;
-	-webkit-transition: opacity 0.75s;
-}
+div.icon_cluster {
+  width: 150px; }
 
-div#picture:hover > *
-{
-	opacity: 0;
-}
+div#content {
+  margin-left: 200px;
+  margin-right: 20px;
+  position: absolute;
+  width: 620px;
+  left: 15%; }
+
+div#icons {
+  position: absolute;
+  left: 15%;
+  width: 150px;
+  margin-right: 20px;
+  margin-bottom: 0px; }
+
+div.arrow-up {
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 43.3px solid #404040; }
+
+div#picture {
+  width: 150px;
+  height: 150px; }
+
+.spacer {
+  height: 8px; }
