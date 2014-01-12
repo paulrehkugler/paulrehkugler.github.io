@@ -1,0 +1,71 @@
+// from https://gist.github.com/ffdead/4215169
+
+/* @author 14islands.com
+ * SASS mixins for future proof resolution media query
+ */
+ 
+@mixin if-min-resolution($dppx) {
+  @include if-resolution(min, $dppx) {
+    @content;
+  }
+}
+ 
+@mixin if-max-resolution($dppx) {
+  @include if-resolution(max, $dppx) {
+    @content;
+  }
+}
+ 
+@mixin if-resolution($prefix, $dppx) {
+  // 1px = 96dpi
+  $dpi: $dppx * 96;
+  @media
+    (-webkit-#{$prefix}-device-pixel-ratio: #{$dppx}),
+    (   #{$prefix}--moz-device-pixel-ratio: #{$dppx}),
+    (     -o-#{$prefix}-device-pixel-ratio: #{$dppx*2}/2),
+    (        #{$prefix}-device-pixel-ratio: #{$dppx}),
+    (                #{$prefix}-resolution: #{$dpi}dpi),
+    (                #{$prefix}-resolution: #{$dppx}dppx) { 
+      @content;
+  }
+}
+
+// from http://joshbroton.com/quick-fix-sass-mixins-for-css-keyframe-animations/
+
+@mixin animation($animate...) {
+    $max: length($animate);
+    $animations: '';
+
+    @for $i from 1 through $max {
+        $animations: #{$animations + nth($animate, $i)};
+
+        @if $i < $max {
+            $animations: #{$animations + ", "};
+        }
+    }
+    -webkit-animation: $animations;
+    -moz-animation:    $animations;
+    -o-animation:      $animations;
+    animation:         $animations;
+
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
+}
