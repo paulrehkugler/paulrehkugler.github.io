@@ -11,10 +11,17 @@ $link-color: #7F7F7F;
 
 $triangle-width: 21.65px;
 
+$default-animation-length: 0.75s;
+
 @mixin border-widths-for-triangle-with-base-width-and-color($base-width, $color) {
 	border-left: (($base-width) / (2 * 0.866)) solid transparent;
 	border-right: (($base-width) / (2 * 0.866)) solid transparent;
 	border-bottom: $base-width solid $color;
+}
+
+@mixin transition($property, $duration) {
+	transition: $property $duration;
+	-webkit-transition: $property $duration;
 }
 
 body {
@@ -35,7 +42,7 @@ h3 {
 a {
 	color: $link-color;
 	text-decoration: none;
-	-webkit-transition: color 0.75s;
+	@include transition(color, $default-animation-length);
 }
 
 a:hover {
@@ -53,7 +60,19 @@ div.arrow-up {
 	height: 0; 
 	float: left;
 	opacity: 1;
-	-webkit-transition: opacity 0.75s;
+	@include transition(opacity, $default-animation-length);
+}
+
+.white {
+	border-bottom-color:$background-color !important;
+}
+
+.gray {
+	border-bottom-color:$link-color !important;
+}
+
+.arrow-up:hover {
+	opacity: 0;
 }
 
 div#picture {
@@ -69,21 +88,9 @@ div#picture {
 	float: left;
 }
 
-.white {
-	border-bottom-color:$background-color !important;
-}
-
-.gray {
-	border-bottom-color:$link-color !important;
-}
-
-.arrow-up:hover {
-	opacity: 0;
-}
-
 div#picture > * {
 	opacity: 1;
-	-webkit-transition: opacity 0.75s;
+	@include transition(opacity, $default-animation-length);
 }
 
 div#picture:hover > * {
