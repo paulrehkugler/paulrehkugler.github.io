@@ -5,6 +5,17 @@ body {
   color: #404040;
   background-color: #f0f0f0; }
 
+div#icons {
+  -webkit-animation: adjust-content 0.75s 1;
+  -moz-animation: adjust-content 0.75s 1;
+  -o-animation: adjust-content 0.75s 1;
+  animation: adjust-content 0.75s 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
 h3 {
   font-weight: 500;
   font-size: 36px;
@@ -61,6 +72,42 @@ div#picture > * {
 div#picture:hover > * {
   opacity: 0; }
 
+@-webkit-keyframes adjust-content {
+  0% {
+    opacity: 0.75;
+    padding-top: 20px; }
+
+  100% {
+    opacity: 1;
+    padding-top: 0px; } }
+
+@-moz-keyframes adjust-content {
+  0% {
+    opacity: 0.75;
+    padding-top: 20px; }
+
+  100% {
+    opacity: 1;
+    padding-top: 0px; } }
+
+@-o-keyframes adjust-content {
+  0% {
+    opacity: 0.75;
+    padding-top: 20px; }
+
+  100% {
+    opacity: 1;
+    padding-top: 0px; } }
+
+@keyframes adjust-content {
+  0% {
+    opacity: 0.75;
+    padding-top: 20px; }
+
+  100% {
+    opacity: 1;
+    padding-top: 0px; } }
+
 body {
   margin-top: 75px; }
 
@@ -72,7 +119,16 @@ div#content {
   margin-right: 20px;
   position: absolute;
   width: 620px;
-  left: 15%; }
+  left: 15%;
+  -webkit-animation: adjust-content 0.75s 1;
+  -moz-animation: adjust-content 0.75s 1;
+  -o-animation: adjust-content 0.75s 1;
+  animation: adjust-content 0.75s 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
 
 div#icons {
   position: absolute;

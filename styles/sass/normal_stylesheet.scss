@@ -16,6 +16,8 @@ div#content {
 	position: absolute;
 	width: 620px;
 	left: 15%;
+
+	@include animation('adjust-content 0.75s 1');
 }
 
 div#icons {

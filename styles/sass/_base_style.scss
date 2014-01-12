@@ -24,12 +24,54 @@ $default-animation-length: 0.75s;
 	-webkit-transition: $property $duration;
 }
 
+@mixin animation($animate...) {
+    $max: length($animate);
+    $animations: '';
+
+    @for $i from 1 through $max {
+        $animations: #{$animations + nth($animate, $i)};
+
+        @if $i < $max {
+            $animations: #{$animations + ", "};
+        }
+    }
+    -webkit-animation: $animations;
+    -moz-animation:    $animations;
+    -o-animation:      $animations;
+    animation:         $animations;
+
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+  	-ms-transform: translate3d(0,0,0);
+  	-o-transform: translate3d(0,0,0);
+  	transform: translate3d(0,0,0);
+}
+
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
+}
+
 body {
 	font-family: $font-family; 
 	font-weight: $default-font-weight;
 	font-size: $default-font-size;
 	color: $text-color;
 	background-color: $background-color;
+}
+
+div#icons {
+	@include animation('adjust-content 0.75s 1');
 }
 
 h3 {
@@ -95,4 +137,9 @@ div#picture > * {
 
 div#picture:hover > * {
 	opacity: 0;
+}
+
+@include keyframes(adjust-content) {
+  0%   { opacity: 0.75; padding-top: 20px; }
+  100% { opacity: 1; padding-top: 0px; }
 }
