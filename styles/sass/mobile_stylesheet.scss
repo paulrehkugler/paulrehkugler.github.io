@@ -31,6 +31,14 @@ div.arrow-up
 
 div#picture
 {
+	@include if-max-resolution(1.49) {
+		background-image:url('../img/paul-face-mobile.png');
+	}
+
+	@include if-min-resolution(1.5) {
+		background-image:url('../img/paul-face-retina-mobile.png');
+	}
+
 	width: 75px;
 	height: 75px;
 }

@@ -1,3 +1,5 @@
+@import 'global_mixins';
+
 $font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 $default-font-weight: 300;
 $default-font-size: 20px;
@@ -22,44 +24,6 @@ $default-animation-length: 0.75s;
 @mixin transition($property, $duration) {
 	transition: $property $duration;
 	-webkit-transition: $property $duration;
-}
-
-@mixin animation($animate...) {
-    $max: length($animate);
-    $animations: '';
-
-    @for $i from 1 through $max {
-        $animations: #{$animations + nth($animate, $i)};
-
-        @if $i < $max {
-            $animations: #{$animations + ", "};
-        }
-    }
-    -webkit-animation: $animations;
-    -moz-animation:    $animations;
-    -o-animation:      $animations;
-    animation:         $animations;
-
-    -webkit-transform: translate3d(0,0,0);
-    -moz-transform: translate3d(0,0,0);
-  	-ms-transform: translate3d(0,0,0);
-  	-o-transform: translate3d(0,0,0);
-  	transform: translate3d(0,0,0);
-}
-
-@mixin keyframes($animationName) {
-    @-webkit-keyframes #{$animationName} {
-        @content;
-    }
-    @-moz-keyframes #{$animationName} {
-        @content;
-    }
-    @-o-keyframes #{$animationName} {
-        @content;
-    }
-    @keyframes #{$animationName} {
-        @content;
-    }
 }
 
 body {
@@ -126,7 +90,6 @@ div.arrow-up {
 }
 
 div#picture {
-	background-image:url('../img/paul_face.jpg');
 	float: left;
 	background-size:cover;
 	border-radius: 50%;
