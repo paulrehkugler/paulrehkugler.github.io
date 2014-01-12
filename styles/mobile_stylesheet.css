@@ -13,13 +13,13 @@ h3 {
 
 a {
   color: #7f7f7f;
-  text-decoration: none;
-  transition: color 0.75s;
-  -webkit-transition: color 0.75s; }
+  text-decoration: none; }
 
 a:hover {
   color: #404040;
-  text-decoration: underline; }
+  text-decoration: underline;
+  transition: color 0.75s;
+  -webkit-transition: color 0.75s; }
 
 div.icon_cluster {
   width: 75px;
