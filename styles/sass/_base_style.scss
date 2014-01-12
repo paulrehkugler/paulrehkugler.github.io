@@ -70,10 +70,6 @@ body {
 	background-color: $background-color;
 }
 
-div#icons {
-	@include animation('adjust-content 0.75s 1');
-}
-
 h3 {
 	font-weight: $heavy-font-weight;
 	font-size: $heavy-font-size;
@@ -95,6 +91,18 @@ a:hover {
 div.icon_cluster {
 	width: 75px;
 	float: left;
+}
+
+.icon_cluster.first {
+	@include animation('fade-in 0.75s 1');
+}
+
+.icon_cluster.second {
+	@include animation('fade-in 1.5s 1');
+}
+
+.icon_cluster.third {
+	@include animation('fade-in 2.25s 1');
 }
 
 div.arrow-up {
@@ -142,4 +150,9 @@ div#picture:hover > * {
 @include keyframes(adjust-content) {
   0%   { opacity: 0.75; padding-top: 20px; }
   100% { opacity: 1; padding-top: 0px; }
+}
+
+@include keyframes(fade-in) {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
 }

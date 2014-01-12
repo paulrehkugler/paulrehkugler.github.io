@@ -5,17 +5,6 @@ body {
   color: #404040;
   background-color: #f0f0f0; }
 
-div#icons {
-  -webkit-animation: adjust-content 0.75s 1;
-  -moz-animation: adjust-content 0.75s 1;
-  -o-animation: adjust-content 0.75s 1;
-  animation: adjust-content 0.75s 1;
-  -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  -o-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0); }
-
 h3 {
   font-weight: 500;
   font-size: 36px;
@@ -35,6 +24,39 @@ a:hover {
 div.icon_cluster {
   width: 75px;
   float: left; }
+
+.icon_cluster.first {
+  -webkit-animation: fade-in 0.75s 1;
+  -moz-animation: fade-in 0.75s 1;
+  -o-animation: fade-in 0.75s 1;
+  animation: fade-in 0.75s 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
+.icon_cluster.second {
+  -webkit-animation: fade-in 1.5s 1;
+  -moz-animation: fade-in 1.5s 1;
+  -o-animation: fade-in 1.5s 1;
+  animation: fade-in 1.5s 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
+.icon_cluster.third {
+  -webkit-animation: fade-in 2.25s 1;
+  -moz-animation: fade-in 2.25s 1;
+  -o-animation: fade-in 2.25s 1;
+  animation: fade-in 2.25s 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
 
 div.arrow-up {
   width: 0;
@@ -107,6 +129,34 @@ div#picture:hover > * {
   100% {
     opacity: 1;
     padding-top: 0px; } }
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-moz-keyframes fade-in {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-o-keyframes fade-in {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@keyframes fade-in {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
 
 div.icon_cluster {
   width: 75px; }
