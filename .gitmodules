@@ -1,6 +1,0 @@
-[submodule "img"]
-	path = img
-	url = https://github.com/Rehkugler/Shared-Images.git
-[submodule "shared-styles"]
-	path = shared-styles
-	url = https://github.com/Rehkugler/Shared-Stylesheets
