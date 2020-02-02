@@ -32,6 +32,9 @@
 }
 
 body {
+  font-family: Hoefler Text, Baskerville Old Face, Garamond, Times New Roman,
+    serif;
+
   margin: 40px auto;
   max-width: 600px;
 
@@ -51,10 +54,12 @@ h1,
 h2,
 h3 {
   line-height: 1.2;
+  font-weight: normal;
 }
 
 a {
   color: var(--link-color);
+  font-style: italic;
 }
 
 a:hover {
