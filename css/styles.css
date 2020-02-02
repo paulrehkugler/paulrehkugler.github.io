@@ -1,0 +1,70 @@
+/* inspired by http://bettermotherfuckingwebsite.com */
+
+:root {
+  color-scheme: light dark;
+
+  --white: #f1f5f2;
+  --black: #161716;
+
+  --light-brown: #a29b83;
+  --brown: #6e633d;
+  --light-green: #6c856b;
+  --green: #355834;
+  --dark-green: #14281d;
+
+  --foreground-color: var(--black);
+  --background-color: var(--white);
+
+  --link-color: var(--green);
+  --link-hover: var(--light-green);
+  --link-visited: var(--light-brown);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-color: var(--white);
+    --background-color: var(--black);
+
+    --link-color: var(--light-green);
+    --link-hover: var(--green);
+    --link-visited: var(--light-brown);
+  }
+}
+
+body {
+  margin: 40px auto;
+  max-width: 600px;
+
+  font-size: 20px;
+  line-height: 1.6;
+
+  color: #444;
+  background-color: #eeeeee;
+
+  color: var(--foreground-color);
+  background-color: var(--background-color);
+
+  padding: 0 10px;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+a {
+  color: var(--link-color);
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+a:visited {
+  text-decoration-color: var(--link-visited);
+}
+
+nav > a + a {
+  margin-left: 5px;
+}
