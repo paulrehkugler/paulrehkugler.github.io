@@ -50,6 +50,13 @@ body {
   padding: 0 10px;
 }
 
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 85px;
+}
+
 h1,
 h2,
 h3 {
@@ -72,4 +79,9 @@ a:visited {
 
 nav > a + a {
   margin-left: 5px;
+}
+
+.profile-image {
+  border-radius: 50%;
+  height: 100%;
 }
